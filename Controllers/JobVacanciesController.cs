@@ -35,6 +35,22 @@ namespace jobs_application_api.Controllers
             return Ok(jobVacancy);
         }
 
+        /// <summary>
+        ///   Register a job vacancy 
+        /// </summary>
+        /// <remarks>
+        /// {
+        ///   "title": "Job .NET Jr",
+        ///   "description": "Job description.",
+        ///   "company": "Company Name",
+        ///   "isRemote": true,
+        ///   "salaryRange": "3000-5000"
+        /// }
+        /// </remarks>
+        /// <param name="model">Job data</param>
+        /// <returns></returns>
+        /// <response code="201">Success</response>
+        /// <response code="400">Invalid data</response>
         [HttpPost]
         public IActionResult Post(AddJobVacancyInputModel model)
         {
@@ -49,6 +65,21 @@ namespace jobs_application_api.Controllers
             return CreatedAtAction("GetById", new { id = jobVacancy.Id }, jobVacancy);
         }
 
+
+        /// <summary>
+        ///   Update a job vacancy 
+        /// </summary>
+        /// <remarks>
+        /// {
+        ///   "title": "Job .NET Jr",
+        ///   "description": "Job description.",
+        /// }
+        /// </remarks>
+        /// <param name="id">Id job vacancy</param>
+        /// <param name="model">Job data</param>
+        /// <returns></returns>
+        /// <response code="201">Success</response>
+        /// <response code="400">Invalid data</response>
         [HttpPut("{id}")]
         public IActionResult Put(int id, UpdateJobVacancyInputModel model)
         {

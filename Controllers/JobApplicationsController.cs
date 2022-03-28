@@ -17,6 +17,21 @@ namespace jobs_application_api.Controllers
             _repository = repository;
         }
 
+        /// <summary>
+        ///   Register application in a job vacancy 
+        /// </summary>
+        /// <remarks>
+        /// {
+        ///   "applicantName": "Candidate's name",
+        ///   "applicantEmail": "exemplo@mail.com",
+        ///   "idJobVacancy": "Job id"
+        /// }
+        /// </remarks>
+        /// <param name="id">Id job vacancy</param>
+        /// <param name="model">Candidate data</param>
+        /// <returns></returns>
+        /// <response code="201">Success</response>
+        /// <response code="400">Invalid data</response>
         [HttpPost]
         public IActionResult Post(int id, AddJobApplicationInputModel model)
         {

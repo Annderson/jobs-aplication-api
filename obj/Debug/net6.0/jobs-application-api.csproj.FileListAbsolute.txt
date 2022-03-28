@@ -34,3 +34,5 @@
 /home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
 /home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/MySqlConnector.dll
 /home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/jobs-application-api.xml
+/home/anderson-lima/Private/DotNet/jobs-application-api/obj/Debug/net6.0/jobs-application-api.xml

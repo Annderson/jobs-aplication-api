@@ -1,5 +1,19 @@
+using jobs_application_api.Persistence;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("JobsCs");
+builder.Services.AddDbContext<JobsContext>(
+    options =>
+    {
+        options.UseMySql(
+                connectionString,
+                new MySqlServerVersion(new Version(8, 0, 11)
+            )
+        );
+    }
+);
 // Add services to the container.
 
 builder.Services.AddControllers();

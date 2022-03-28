@@ -1,4 +1,5 @@
 using jobs_application_api.Persistence;
+using jobs_application_api.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<JobsContext>(
         );
     }
 );
+
+builder.Services.AddScoped<IJobVacancyRepository, JobVacancyRepository>();
+
 // Add services to the container.
 
 builder.Services.AddControllers();

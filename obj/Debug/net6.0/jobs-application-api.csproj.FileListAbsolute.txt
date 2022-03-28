@@ -25,3 +25,12 @@
 /home/anderson-lima/Private/DotNet/jobs-application-api/obj/Debug/net6.0/jobs-application-api.pdb
 /home/anderson-lima/Private/DotNet/jobs-application-api/obj/Debug/net6.0/jobs-application-api.genruntimeconfig.cache
 /home/anderson-lima/Private/DotNet/jobs-application-api/obj/Debug/net6.0/ref/jobs-application-api.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Humanizer.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/MySqlConnector.dll
+/home/anderson-lima/Private/DotNet/jobs-application-api/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll

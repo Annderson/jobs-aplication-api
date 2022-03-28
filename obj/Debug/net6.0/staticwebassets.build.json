@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "HSEX3IZe/iFGzz/fdmOn6vcpoFr07lRBehyVg7uL7XY=",
+  "Source": "jobs-application-api",
+  "BasePath": "_content/jobs-application-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

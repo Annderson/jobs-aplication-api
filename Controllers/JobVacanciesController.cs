@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using jobs_application_api.Models;
 using jobs_application_api.Entities;
 using jobs_application_api.Persistence.Repositories;
+using Serilog;
 
 namespace jobs_application_api.Controllers
 {
@@ -54,6 +55,7 @@ namespace jobs_application_api.Controllers
         [HttpPost]
         public IActionResult Post(AddJobVacancyInputModel model)
         {
+            Log.Information("Register job vacancy");
             var jobVacancy = new JobVacancy(
                 model.Title,
                 model.Description,
@@ -83,6 +85,7 @@ namespace jobs_application_api.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, UpdateJobVacancyInputModel model)
         {
+            Log.Information("Update job vacancy");
             var jobVacancy = _repository.GetById(id);
             
             if (jobVacancy == null)

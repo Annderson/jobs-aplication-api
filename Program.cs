@@ -2,6 +2,9 @@ using jobs_application_api.Persistence;
 using jobs_application_api.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Pomelo.EntityFrameworkCore.MySql.Internal;
+using Serilog;
+using Serilog.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,10 +38,17 @@ builder.Services.AddSwaggerGen(c => {
             Url = new Uri("https://www.linkedin.com/in/anderson-r-lima/")
         }
     });
-    var xmlFile = $"jobs-application-api.xml";
+    var xmlFile = "jobs-application-api.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
 });
+
+builder.Host.ConfigureAppConfiguration((hostingContext, config) => {
+    Serilog.Log.Logger = new LoggerConfiguration()
+        .Enrich.FromLogContext()
+        .WriteTo.MySQL(connectionString )
+        .CreateLogger();
+}).UseSerilog();
 
 var app = builder.Build();
 
